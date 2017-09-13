@@ -1,0 +1,3 @@
+[submodule "images"]
+	path = logo
+	url = git@github.com:FabLab-ETOILE/logo.git

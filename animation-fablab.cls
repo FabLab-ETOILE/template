@@ -2,7 +2,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesPackage{monextension}[Extension FabLab, V1.0]
+\ProvidesPackage{animation-fablab}[Extension FabLab, V1.0]
 
 % extensions
 
@@ -15,7 +15,27 @@
 \RequirePackage{minted}
 \RequirePackage{hyperref}
 
+\newcommand{\topic}[1]{\def\@topic{#1}}
 
 % commandes personnelles
 
-%\newcommand{}{}
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+      \centering
+      \vfill
+      {\bfseries \Huge
+          \@title\\
+      }
+      {\huge
+          \@author\\
+          \vskip2cm
+          \@topic\\
+      }
+      \vfill
+      \includegraphics[width=8cm]{logo/logo-fablab.png}
+      \vfill
+      \vfill
+    \end{titlepage}
+
+    \newpage
+}
